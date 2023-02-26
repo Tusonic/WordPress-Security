@@ -1,0 +1,5 @@
+apache2
+
+Options Indexes FallowSymLinks
+AllowOverride ALL <-- change
+Require all granted
