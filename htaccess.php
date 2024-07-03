@@ -16,10 +16,6 @@ RewriteRule ^(.*)$ https://example.pl/$1 [R=301,L]
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
 
-//Blokowanie indeksowanie
-Options All -Indexes
-Options -Indexes
-
 // Prevent Script Injections 
 // Zapobiegaj wstrzykiwaniu skryptów
 Options +FollowSymLinks
