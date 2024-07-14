@@ -1,4 +1,3 @@
-<?php
 
 // Block File
 // Blokowanie plikow
@@ -29,6 +28,29 @@ RewriteRule ^(.*)$ index.php [F,L]
 // Zabezpieczenie loginu
 RewriteCond %{QUERY_STRING} author=\d
 RewriteRule ^ /? [L,R=301]
+
+// wp-admin dostęp 
+// wp-admin access
+<Files wp-login.php>
+order deny,allow
+deny from all
+allow from xxx.xxx.xxx.xxx
+</Files>
+
+// Hotlinking
+// Gorące Łączenie
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?twojadomena.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
+
+// Blocking script execution
+// Blokowanie wykonywania skryptów
+<Directory /wp-content/uploads/>
+php_flag engine off
+</Directory>
+
+
 
 
 
