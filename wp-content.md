@@ -1,10 +1,8 @@
-<?php
+## CREATE wp-content\.htaccess
 
-// wp-content\.htaccess
-
+```
 <FilesMatch "\.(?i:php)$">
 	Order allow,deny
 	Deny from all
 </FilesMatch>
-
-?>
+```

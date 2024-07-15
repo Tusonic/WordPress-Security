@@ -1,7 +1,6 @@
-<?php
+## CREATE wp-includes\.htaccess
 
-// wp-includes\.htaccess
-
+```
 <FilesMatch "\.(?i:php)$">
 	Order allow,deny
 	Deny from all
@@ -11,6 +10,4 @@
 </Files>
 <Files ms-files.php>
 	Allow from all
-</Files>
-
-?>
+</File
