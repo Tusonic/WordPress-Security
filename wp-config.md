@@ -26,3 +26,12 @@ error_reporting(0);
 ini_set('display_errors','Off');
 ini_set('error_reporting',E_ALL);
 ```
+
+## AUTOUPDATE
+```
+define( 'WP_AUTO_UPDATE_CORE', false );
+```
+```
+define( 'AUTOMATIC_UPDATER_DISABLED', true );
+```
+
